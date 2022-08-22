@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>timothy: for your information</title>
+    <link rel="icon" href="img/placeholder1.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+</head>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>
+    <div id="header">
+        <div id="headercontent">
+            <div class="fade-in-text" id="ttt">
+                <h1 id="fadetext">Hi, I'm Tim</h1>
+            </div>
+            
+            <div id="hideimg">
+                <img class="active" src="img/placeholder1.png" id="himage">
+                <img src="img/placeholder2.png" id="himage">
+                <img src="img/placeholder3.png" id="himage">
+            </div>
+
+            <div id="headerlinks">
+                <a target="_blank" title="GitHub" href="https://github.com/timothy-fyi/" class="headerlinks">GitHub</a> | 
+                <a target="_blank" title="LinkedIn" href="https://www.linkedin.com/in/my-linkedin-here/" class="headerlinks">LinkedIn</a> | 
+                <a target="_blank" title="E-Mail" href=mailto:mail@emailhere.com class="headerlinks">E-Mail</a> 
+            </div>
+        </div>    
+    </div>
+
+    <div id ="bugs"><a href="mailto:mail@emailhere.com?subject=Bug found on your website" class="bugs">Report Bug</a></div>
+</body>
+
+<script>
+    function cycleImages(){
+      var $active = $('#hideimg .active');
+      var $next = ($active.next().length > 0) ? $active.next() : $('#hideimg img:first');
+      $next.css('z-index',2);//move the next image up the pile
+      $active.fadeOut(1500,function(){//fade out the top image
+	  $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+          $next.css('z-index',3).addClass('active');//make the next image the top one
+      });
+    }
+
+    $(document).ready(function(){
+    // run every 7s
+    setInterval('cycleImages()', 3000);
+    })
+</script>
+
+</html> 

@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+    font-family: Helvetia, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0;
+    background-color: #4862d4;
+}
+
+#header{
+    text-align: center;
+    padding-bottom: 50px;
+    color: white;
+    font-size: 70px;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+#headercontent{
+    margin: 0;
+    /* display: flex; */
+    /* align-items: center; */
+    justify-content: center
+}
+
+#hideimg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#hideimg img{
+    border-radius: 300px;
+    width: 400px;
+    height: 345px;
+    border: 20px solid white;
+    position: absolute;
+    z-index: 1;
+}
+
+#hideimg img.active{
+    position: relative;
+    z-index:3;
+}
+
+/* header fade in */
+.fade-in-text {
+    animation: fadeIn linear 2s;
+    -webkit-animation: fadeIn linear 2s;
+    -moz-animation: fadeIn linear 2s;
+    -o-animation: fadeIn linear 2s;
+    -ms-animation: fadeIn linear 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+/* header links */
+#headerlinks {
+text-align: center;
+padding-top: 50px;
+height: 0px;
+font-size: 32px;
+color: white;
+font-weight: lighter;
+position: relative;
+/* line-height: 830px; */
+}
+a.headerlinks {
+    color: white;  
+    padding-top: 0px; 
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 30px;
+    display: inline-block;
+    position: relative;
+}
+
+a.headerlinks:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: center;
+    transition: transform 0.25s ease-out;
+}
+
+a.headerlinks:hover:after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+#bugs {
+    position:fixed;
+    font-weight: lighter;
+    bottom:10px;
+    right:0px;
+    height:20px;
+    width:90px;
+    float: right;
+    font-size: 17px;
+}
+a.bugs {
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+a.bugs:hover{
+    color: gray;
+}
