@@ -116,6 +116,10 @@ a.headerlinks:after {
     transition: transform 0.25s ease-out;
 }
 
+a.headerlinks:hover {
+    color: lightgray;
+}
+
 a.headerlinks:hover:after {
     transform: scaleX(1);
     transform-origin: center;
@@ -138,5 +142,5 @@ a.bugs {
 }
 
 a.bugs:hover{
-    color: gray;
+    color: lightgray;
 }
